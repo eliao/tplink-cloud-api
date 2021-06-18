@@ -12,11 +12,11 @@
     "url": "https://github.com/eliao/tplink-cloud-api/issues"
   },
   "version": "0.8.1",
-  "main": "./lib/tplink.js",
+  "main": "./distribution/tplink.js",
   "files": [
-    "/lib/**/*"
+    "/distribution/**/*"
   ],
-  "types": "lib/index.d.ts",
+  "types": "distribution/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "lint": "tslint --project tsconfig.json -c tslint.json lib/**/*.ts",
