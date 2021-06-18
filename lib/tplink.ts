@@ -24,6 +24,7 @@ import axios from "axios";
 import { v4 } from "uuid";
 import { checkError } from "./api-utils";
 import device from "./device";
+import ep10 from "./ep10";
 import hs100 from "./hs100";
 import hs110 from "./hs110";
 import hs200 from "./hs200";
@@ -199,6 +200,11 @@ export default class TPLink {
       throw new Error("invalid alias/deviceId: not found in device list");
     }
     return deviceInfo;
+  }
+
+  // for an EP10 smartplug
+  getEP10(alias) {
+    return new ep10(this, this.findDevice(alias));
   }
 
   // for an HS100 smartplug
